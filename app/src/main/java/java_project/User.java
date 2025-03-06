@@ -1,5 +1,7 @@
+package java_project;
+
 public class User {
-    private int userId;
+    private final int userId;
     private final String name;
     private String language;
 
@@ -19,5 +21,20 @@ public class User {
 
     public void disconnect() {
         System.out.println(name + " s'est déconnecté.");
+    }
+
+    // Getter for userId
+    public int getUserId() {
+        return userId;
+    }
+
+    // Getter for name
+    public String getName() {
+        return name;
+    }
+
+    
+    public String getLanguage() {
+        return this.language;
     }
 }

@@ -1,3 +1,5 @@
+package java_project;
+
 public class BraceletsSettings {
     private int frequency;
     private int vibrationIntensity;
@@ -11,5 +13,13 @@ public class BraceletsSettings {
         this.frequency = newFrequency;
         this.vibrationIntensity = newIntensity;
         System.out.println("Paramètres mis à jour.");
+    }
+
+    public int getFrequency(){
+        return this.frequency;
+    }
+
+    public int getVibrationIntensity(){
+        return this.vibrationIntensity;
     }
 }

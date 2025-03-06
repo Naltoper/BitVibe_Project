@@ -1,15 +1,29 @@
-ublic class BraceletsSettings {
-    private int frequency;
-    private int vibrationIntensity;
+package java_project;
 
-    public  BraceletsSettings(int frequency, int vibrationIntensity) {
-        this.frequency = frequency;
-        this.vibrationIntensity = vibrationIntensity;
+public class BitcoinPrice {
+    private Double bitcoinPrice;
+
+    // Constructor
+    public BitcoinPrice() {
+        this.bitcoinPrice = fetchBitcoinPrice();
     }
 
-    public void updateSettings(int newFrequency, int newIntensity) {
-        this.frequency = newFrequency;
-        this.vibrationIntensity = newIntensity;
-        System.out.println("Paramètres mis à jour.");
+    // Method to fetch Bitcoin price from CoinGecko API
+    private Double fetchBitcoinPrice() {
+        Double price = 90_000.0; //TODO fetch from api
+        return price;
+    }
+
+
+    // Method to refresh the price
+    public void refreshPrice() {
+        this.bitcoinPrice = fetchBitcoinPrice();
+    }
+
+
+    // Public method to get the current price
+    public Double getCurrentPrice() {
+        refreshPrice();
+        return this.bitcoinPrice;
     }
 }

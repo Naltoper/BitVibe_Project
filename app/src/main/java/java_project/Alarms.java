@@ -1,3 +1,5 @@
+package java_project;
+
 public class Alarms {
     private int alarmId;
     private double triggerPrice;
@@ -19,10 +21,15 @@ public class Alarms {
     public void setTriggerPrice(double triggerPrice) {
         this.triggerPrice = triggerPrice;
     }
+
+    //Getters
     public double getTriggerPrice() {
         return triggerPrice;
     }
     public int getAlarmIntensity() {
         return alarmIntensity;
+    }
+    public int getAlarmId(){
+        return this.alarmId;
     }
 }
